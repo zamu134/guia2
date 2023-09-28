@@ -1,0 +1,35 @@
+using System;
+
+class demo
+{
+    static void Main()
+    {
+        Console.WriteLine("Escriba la primer cadena a comparar: ");
+        string Cadena1 = Console.ReadLine();
+
+        Console.WriteLine("\nEscriba la segunda cadena a comparar: ");
+        string Cadena2 = Console.ReadLine();
+
+        int comparacion = Cadena1.CompareTo(Cadena2);
+
+        if (comparacion == 0)
+        {
+            Console.WriteLine("\nLas son identicas segun la funcion CompareTo().");
+        }
+        else
+        {
+            Console.WriteLine("\nLas cadenas no son identicas segun la funcion CompareTo.");
+        }
+
+        bool iguales = Cadena1.Equals(Cadena2);
+
+        if (iguales)
+        {
+            Console.WriteLine("Las son identicas según la funcion Equals.");
+        }
+        else
+        {
+            Console.WriteLine("Las cadenas no son identicas segun la funcion Equals.");
+        }
+    }
+}

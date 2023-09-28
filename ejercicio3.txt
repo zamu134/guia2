@@ -1,0 +1,33 @@
+using System;
+
+class demo
+{
+    static void Main()
+    {
+        string Cadena = "MI MAMA ME MIMA, AMO A MI MAMA";
+
+        Console.WriteLine("La cadena original: ");
+        Console.WriteLine(Cadena);
+
+        string fraseMinusculas = Cadena.ToLower();
+
+        Console.WriteLine("\nLa cadena en minúsculas: ");
+        Console.WriteLine(fraseMinusculas);
+
+        string[] Palabras = fraseMinusculas.Split(' ');
+
+        Console.WriteLine("\nPalabras concatenada y se paradas: ");
+
+        foreach (string Palabra in Palabras)
+        {
+            if (Palabra.Length < 3)
+            {
+                Console.Write(Palabra + "% ");
+            }
+            else
+            {
+                Console.Write(Palabra + " ");
+            }
+        }
+    }
+}

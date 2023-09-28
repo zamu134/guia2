@@ -1,0 +1,50 @@
+using System;
+using System.Linq;
+
+class demo
+{
+    static void Main()
+    {
+        Console.WriteLine("Ingrese una cadena de caracteres: ");
+        string Cadena = Console.ReadLine();
+
+        if (Cadena.Length < 25)
+        {
+            Console.WriteLine("\nLa cadena tiene menos de 25 caracteres.");
+
+            Console.WriteLine("\n¿Donde desea rellenarla?");
+            Console.WriteLine("1. Por la derecha");
+            Console.WriteLine("2. Por la izquierda");
+
+            char Relleno = '$';
+            int opcion = Convert.ToInt32(Console.ReadLine());
+
+            if (opcion == 1)
+            {
+                while (Cadena.Length < 25)
+                {
+                    Cadena += Relleno;
+                }
+            }
+            else if (opcion == 2)
+            {
+                while (Cadena.Length < 25)
+                {
+                    Cadena = Relleno + Cadena;
+                }
+            }
+            else
+            {
+                Console.WriteLine("La opción es inválida.");
+                return;
+            }
+
+            Console.WriteLine("\nLa cadena a rellenada es: ");
+            Console.WriteLine(Cadena);
+        }
+        else
+        {
+            Console.WriteLine("\nLa cadena tiene mas de 25 caracteres, no es necesario rellenarla.");
+        }
+    }
+}
